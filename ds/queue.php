@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 
 class Queue {
@@ -11,7 +10,7 @@ class Queue {
     
     // Remoe First Item
     public function remove() {
-        array_shift($this->queue);
+        return array_shift($this->queue);
     }
     
     // return First Item
@@ -29,14 +28,14 @@ class Queue {
     }
 }
 
-$queue = new Queue();
-$queue->add(1);
-$queue->add(2);
-$queue->add(3);
-$queue->add(4);
-$queue->add(5);
+// $queue = new Queue();
+// $queue->add(1);
+// $queue->add(2);
+// $queue->add(3);
+// $queue->add(4);
+// $queue->add(5);
 
-echo "Top = " . $queue->peek() . PHP_EOL;
-$queue->remove();
-echo "Top = " . $queue->peek() . PHP_EOL;
-print_r($queue->get());
+// echo "Top = " . $queue->peek() . PHP_EOL;
+// $queue->remove();
+// echo "Top = " . $queue->peek() . PHP_EOL;
+// print_r($queue->get());
