@@ -2,7 +2,7 @@
 
 namespace App\DataStructures;
 
-class StackNode
+class QueueNode
 {
     public $value;
     public $next;
@@ -35,7 +35,7 @@ class Queue
 
     function push($item)
     {
-        $node = new StackNode($item);
+        $node = new QueueNode($item);
 
         if($this->isEmpty()){
             $this->front = $node;
