@@ -70,7 +70,7 @@ class Trie
     /**
      * This will take a prefix and send a list of possible words with that prefix.
     */
-    function getSuggestions(string $prefix): array {
+    function suggest(string $prefix): array {
         $chars = str_split(strrev($prefix));
         $node = $this->root;
         while(count($chars) > 0) {

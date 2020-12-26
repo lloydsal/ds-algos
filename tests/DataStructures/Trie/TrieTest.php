@@ -35,19 +35,18 @@ class TrieTest extends TestCase
     }
 
     /**
-     * @dataProvider providerGetSuggestions
+     * @dataProvider providerSuggest
     */
-    function testGetSuggestions($words, $prefix, $suggestions) {
+    function testSuggest($words, $prefix, $suggestions) {
         $trie = new Trie();
         foreach($words as $word) {
             $trie->addWord($word);
         }
-        $this->assertEquals($suggestions, $trie->getSuggestions($prefix));
+        $this->assertEquals($suggestions, $trie->suggest($prefix));
     }
 
-    function providerGetSuggestions() {
+    function providerSuggest() {
         return [
-            [ ['boat', 'car', 'cars', 'care', 'card', 'cards'], 'd', [] ],
             [ ['boat', 'car', 'cars', 'care', 'card', 'cards'], 'b', ['boat'] ],
             [ ['boat', 'car', 'cars', 'care', 'card', 'cards'], 'c', ['car', 'cars', 'care', 'card', 'cards'] ],
             [ ['boat', 'car', 'cars', 'care', 'card', 'cards'], 'car', ['car', 'cars', 'care', 'card', 'cards'] ],
