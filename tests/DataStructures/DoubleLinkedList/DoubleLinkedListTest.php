@@ -40,10 +40,6 @@ class DoubleLinkedListTest extends TestCase
     }
 
     function testMoveToTop() {
-        /**
-         * when 2 or more nodes
-        */
-
         $list = new DoubleLinkedList();
         $list->moveToTop(new Node(0, 0));
         $this->assertTrue($list->isEmpty());
