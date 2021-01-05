@@ -1,3 +1,4 @@
 .phpunit.cache
 vendor/
 play.php
+.DS_Store
